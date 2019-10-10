@@ -8,11 +8,19 @@
 </head>
 
   <body>
+      <hi> My Calculator </hi>
+    <hr>
 
-    {% block body %}
+    <div class="wrapper">
 
-    {% endblock %}
+      <div class="data">
+        {% block body %}
 
+        {% endblock %}
+      </div> <!-- Close the data div -->
+    <div style="clear:both;"></div> <!-- Close styling -->
+
+  </div><!--close the wrapper div -->
 
   </body>
 

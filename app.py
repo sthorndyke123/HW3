@@ -21,7 +21,7 @@ def Divide():
         calc = round(number[2])
         return render_template('index.html', display=calc, pageTitle='Loan Payment Calculator')
 
-return redirect('/')
+        return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)

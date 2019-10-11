@@ -12,17 +12,16 @@ def Divide():
     if request.method =='POST':
         form = request.form
         A = float(form['NumOne'])
-        n = float(form['NumTwo'])
-        i = float(form['NumThree'])
-        D = float(form['NumFour'])
-        n = years * monthly payments
-        i = annual rate / monthly payments
-        d = ((( 1 + i ) ^^n ) - 1 ) / ( i ( 1+ i) ^^n)
+        numberPayments= float(form['NumTwo'])
+        Interestrate = float(form['NumThree'])
+        n = numberPayments * 12
+        i = Interestrate / 12
+        D = ((( 1 + i ) ^n ) - 1 ) / ( i ( 1+ i) ^n)
         calc =  A/D
-        calc = round(number[, 2])
+        calc = round(number[2])
         return render_template('index.html', display=calc, pageTitle='Loan Payment Calculator')
 
-    return redirect("/")
+return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)

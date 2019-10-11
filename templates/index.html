@@ -9,14 +9,17 @@
 <form  method="post">
   <table>
     <tr>
-      <td> Loan Ammount: </td> <td> <input type="text" name="A" /> </td>
+      <td> Loan Payment: </td> <td> <input type="text" name="A" /> </td>
     </tr>
     <tr>
-      <td> Discount Factor: </td> <td> <input type="text" name="D" /> </td>
+      <td> Length of the Loan: </td> <td> <input type="text" name="N" /> </td>
+    </tr>
+    <tr>
+      <td> Interest rate: </td> <td> <input type="text" name="i" /> </td>
     </tr>
   </table>
     <br>
-  <input class="button" type="submit" formaction="/add" value="Add Them!"/>
+  <input class="button" type="submit" formaction="/Divide" value="Divide Them!"/>
 </form>
 
 <p> {{ display }} </p>

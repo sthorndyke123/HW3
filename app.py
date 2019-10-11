@@ -6,13 +6,15 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html', display="", pageTitle='Loan Payment Calculator')
-@app.route('/add', methods=['GET', 'post'])
-def addition():
-    if request.method =='post':
+
+@app.route('/add', methods=['GET', 'POST'])
+def Divide():
+    if request.method =='POST':
         form = request.form
         A = int(form['A'])
-        D = int(form['D'])
-        calc = A + D
+        N = int(form['N'])
+        i = int(form['i'])
+        calc =  A/ ((( 1 + i ) ^n ) - 1 ) / ( i ( 1+ i) ^n)
         return render_template('index.html', display=calc, pageTitle='Loan Payment Calculator')
 
     return redirect("/")
